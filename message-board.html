@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loser Coin Foundation | Community Message Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="board-page">
+  <header class="hero compact">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Community Message Board</h1>
+        <p class="tagline">Share your thoughts with fellow members of the Loser Coin Foundation.</p>
+        <a class="button ghost" href="index.html">Read the Whitepaper</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container board">
+    <section class="board-intro">
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Be respectful and constructive with your feedback.</li>
+        <li>Celebrate the spirit of experimentation that defines Loser Coin.</li>
+        <li>Avoid sharing sensitive personal information.</li>
+      </ul>
+    </section>
+
+    <section class="board-form">
+      <h2>Leave a Message</h2>
+      <form id="messageForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name or alias" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Share an idea, question, or shout-out" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button">Post Message</button>
+          <button type="button" class="button ghost" id="clearBoard">Clear All</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="board-messages">
+      <h2>Latest Messages</h2>
+      <div id="messages" class="message-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Loser Coin Foundation. Built with heart by the community.</p>
+    </div>
+  </footer>
+
+  <script src="message-board.js"></script>
+</body>
+</html>
