@@ -1,59 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loser Coin Foundation | Community Message Board</title>
+  <title>Loser Coin Foundation | 社区留言板</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="board-page">
   <header class="hero compact">
     <div class="container">
       <div class="hero-content">
-        <h1>Community Message Board</h1>
-        <p class="tagline">Share your thoughts with fellow members of the Loser Coin Foundation.</p>
-        <a class="button ghost" href="index.html">Read the Whitepaper</a>
+        <h1>社区留言板</h1>
+        <p class="tagline">欢迎分享你对 Loser Coin Foundation 的想法与建议。</p>
+        <a class="button ghost" href="index.html">返回白皮书</a>
       </div>
     </div>
   </header>
 
   <main class="container board">
     <section class="board-intro">
-      <h2>Guidelines</h2>
+      <h2>留言须知</h2>
       <ul>
-        <li>Be respectful and constructive with your feedback.</li>
-        <li>Celebrate the spirit of experimentation that defines Loser Coin.</li>
-        <li>Avoid sharing sensitive personal information.</li>
+        <li>请保持尊重与友善，理性表达观点。</li>
+        <li>欢迎分享创意、提问与建议，共建有趣的 Loser Coin 社区。</li>
+        <li>留言与评论仅保存在本地浏览器，可随时再次查看。</li>
       </ul>
     </section>
 
     <section class="board-form">
-      <h2>Leave a Message</h2>
+      <h2>发布留言</h2>
       <form id="messageForm">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name or alias" required>
+          <label for="name">昵称</label>
+          <input type="text" id="name" name="name" placeholder="请输入昵称或保持匿名">
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Share an idea, question, or shout-out" required></textarea>
+          <label for="message">留言内容</label>
+          <textarea id="message" name="message" rows="4" placeholder="写下你的想法、疑问或鼓励" required></textarea>
         </div>
         <div class="form-actions">
-          <button type="submit" class="button">Post Message</button>
-          <button type="button" class="button ghost" id="clearBoard">Clear All</button>
+          <button type="submit" class="button">发布留言</button>
         </div>
       </form>
     </section>
 
-    <section class="board-messages">
-      <h2>Latest Messages</h2>
-      <div id="messages" class="message-list" aria-live="polite"></div>
+    <section class="board-messages latest">
+      <h2>最新留言</h2>
+      <div id="latestMessages" class="message-list" aria-live="polite"></div>
+    </section>
+
+    <section class="board-messages hottest">
+      <h2>最热留言</h2>
+      <p class="section-description">按点赞数排序的前五条热门留言，来为你喜欢的声音加油吧。</p>
+      <div id="topMessages" class="message-list" aria-live="polite"></div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Loser Coin Foundation. Built with heart by the community.</p>
+      <p>&copy; <span id="year"></span> Loser Coin Foundation. 社区与你一起书写故事。</p>
     </div>
   </footer>
 

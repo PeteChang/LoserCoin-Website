@@ -225,6 +225,11 @@ p {
   box-shadow: 0 16px 36px rgba(4, 6, 16, 0.32);
 }
 
+.section-description {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+
 .board-intro ul {
   margin: 1rem 0 0;
   padding-left: 1.1rem;
@@ -284,6 +289,126 @@ textarea {
   border-radius: 14px;
   border: 1px solid var(--border);
   box-shadow: 0 12px 28px rgba(4, 6, 16, 0.28);
+}
+
+.message-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.like-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: rgba(242, 183, 5, 0.14);
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.like-button:hover,
+.like-button:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(242, 183, 5, 0.35);
+  background: rgba(242, 183, 5, 0.22);
+}
+
+.like-count {
+  font-weight: 700;
+}
+
+.comment-count {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.comment-section {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.comment-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(164, 172, 196, 0.18);
+}
+
+.comment-meta {
+  margin: 0 0 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.comment-text {
+  margin: 0;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.comment-empty {
+  margin: 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.comment-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+}
+
+.comment-form textarea {
+  min-height: 90px;
+}
+
+.button.subtle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.35rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button.subtle:hover,
+.button.subtle:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(242, 183, 5, 0.3);
+  background: rgba(242, 183, 5, 0.16);
+}
+
+.comment-form .button.subtle {
+  justify-self: start;
 }
 
 .message-header {
