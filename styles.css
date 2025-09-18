@@ -18,9 +18,46 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Roboto, sans-serif;
-  background: radial-gradient(circle at top, rgba(242, 183, 5, 0.07), transparent 60%), var(--background);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(242, 183, 5, 0.18), transparent 55%),
+    radial-gradient(circle at 82% -10%, rgba(242, 183, 5, 0.15), transparent 55%),
+    radial-gradient(circle at 50% 120%, rgba(242, 183, 5, 0.22), transparent 72%),
+    linear-gradient(145deg, rgba(242, 183, 5, 0.08), rgba(11, 13, 23, 0.92) 45%, rgba(242, 183, 5, 0.06));
+  background-attachment: fixed;
   color: var(--text);
   line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(242, 183, 5, 0.09) 1px, transparent 1px),
+    radial-gradient(circle, rgba(242, 183, 5, 0.05) 1px, transparent 1px);
+  background-size: 180px 180px, 120px 120px;
+  background-position: 0 0, 90px 60px;
+  opacity: 0.35;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 640px;
+  height: 640px;
+  top: -160px;
+  right: -120px;
+  background: radial-gradient(circle, rgba(242, 183, 5, 0.24) 0%, rgba(242, 183, 5, 0.07) 42%, transparent 68%);
+  opacity: 0.6;
+  z-index: -1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 45px rgba(242, 183, 5, 0.18));
 }
 
 h1, h2, h3 {
@@ -207,8 +244,21 @@ p {
   margin-top: 4rem;
 }
 
-.board-page {
-  background: radial-gradient(circle at top, rgba(242, 183, 5, 0.12), transparent 60%), var(--background);
+body.board-page {
+  background-image:
+    radial-gradient(circle at 16% 18%, rgba(242, 183, 5, 0.2), transparent 58%),
+    radial-gradient(circle at 84% -8%, rgba(242, 183, 5, 0.16), transparent 54%),
+    radial-gradient(circle at 50% 115%, rgba(242, 183, 5, 0.25), transparent 72%),
+    linear-gradient(150deg, rgba(242, 183, 5, 0.08), rgba(11, 13, 23, 0.92) 48%, rgba(242, 183, 5, 0.08));
+}
+
+body.board-page::after {
+  top: auto;
+  bottom: -240px;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(242, 183, 5, 0.2) 0%, rgba(242, 183, 5, 0.06) 38%, transparent 65%);
 }
 
 .board {
